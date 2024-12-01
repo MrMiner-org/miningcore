@@ -10,11 +10,36 @@ using NBitcoin;
 namespace Miningcore.Blockchain.Kaspa.Custom.Waglayla;
 
 public class WaglaylaJob: KaspaJob {
+  protected Blake3 blake3Hasher;
   protected Sha3_256 sha3_256Hasher;
 
   public WaglaylaJob(IHashAlgorithm customBlockHeaderHasher, IHashAlgorithm customCoinbaseHasher, IHashAlgorithm customShareHasher): base(customBlockHeaderHasher, customCoinbaseHasher, customShareHasher) {
+    this.blake3Hasher = new Blake3();
     this.sha3_256Hasher = new Sha3_256();
   }
+
+  private Span<byte> MatrixMultiply(Span<byte> input)
+{
+    // Example placeholder matrix operation
+    byte[,] matrix = {
+        { 1, 2, 3, 4 },
+        { 5, 6, 7, 8 },
+        { 9, 10, 11, 12 },
+        { 13, 14, 15, 16 }
+    };
+
+    byte[] result = new byte[32];
+    for (int i = 0; i < 32; i++)
+    {
+        result[i] = 0;
+        for (int j = 0; j < 32; j++)
+        {
+            result[i] ^= (byte)(input[j] * matrix[i % 4, j % 4]); // Example multiplication
+        }
+    }
+
+    return result.AsSpan();
+}
 
   protected override Share ProcessShareInternal(StratumConnection worker, string nonce) {
     var context = worker.ContextAs < KaspaWorkerContext > ();
