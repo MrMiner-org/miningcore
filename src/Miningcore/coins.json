@@ -626,6 +626,34 @@
         "explorerTxLink": "https://cann.tokenview.com/en/tx/{0}",
         "explorerAccountLink": "https://cann.tokenview.com/en/address/{0}"
     },
+    "cpuchain": {
+        "name": "CPUchain",
+        "canonicalName": "CPUchain",
+        "symbol": "CPU",
+        "family": "bitcoin",
+        "website": "https://cpuchain.org/",
+        "twitter": "https://twitter.com/cpuchain/",
+        "telegram": "https://t.me/cpuchainofficial/",
+        "discord": "",
+        "coinbaseHasher": {
+            "hash": "sha256d"
+        },
+        "headerHasher": {
+            "hash": "cpupower"
+        },
+        "blockHasher": {
+            "hash": "reverse",
+            "args": [
+                {
+                    "hash": "cpupower"
+                }
+            ]
+        },
+        "shareMultiplier": 65536,
+        "explorerBlockLink": "https://explorer.cpuchain.org/#/block/$hash$",
+        "explorerTxLink": "https://explorer.cpuchain.org/#/tx/{0}",
+        "explorerAccountLink": "https://explorer.cpuchain.org/#/address/{0}"
+    },
     "danecoin": {
         "name": "Danecoin",
         "canonicalName": "Danecoin",
