@@ -15,18 +15,18 @@
 #define __BLAKE2_CONFIG_H__
 
 #if defined(_M_IX86_FP)
-#if _M_IX86_FP == 2
-#define HAVE_SSE2
-#ifndef HAVE_AVX
-#define HAVE_AVX
-#endif
-#endif
+    #if _M_IX86_FP == 2
+        #define HAVE_SSE2
+        #ifndef HAVE_AVX
+            #define HAVE_AVX
+        #endif
+    #endif
 #elif defined(_M_AMD64) || defined(_M_X64)
-#define HAVE_SSSE3
+    #define HAVE_SSSE3
 #endif
 
 // These don't work everywhere
-#if defined(__SSE2__)
+#if defined(__SSE2__) 
 #define HAVE_SSE2
 #endif
 
@@ -80,3 +80,4 @@
 #endif
 
 #endif
+
