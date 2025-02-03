@@ -1,4 +1,4 @@
-using System.ComponentModel;
+cusing System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.Runtime.Serialization;
 using AspNetCoreRateLimit;
@@ -395,6 +395,9 @@ public enum CryptonightHashType
     [EnumMember(Value = "randomarq")]
     RandomARQ,
 
+    [EnumMember(Value = "panthera")]
+    Panthera,
+	
     [EnumMember(Value = "cn0")]
     Cryptonight0,
 
