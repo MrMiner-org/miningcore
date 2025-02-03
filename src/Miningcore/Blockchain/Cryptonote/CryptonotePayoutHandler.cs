@@ -523,7 +523,13 @@ public class CryptonotePayoutHandler : PayoutHandlerBase,
                             block.Reward = (((blockHeader.Reward / coin.SmallestUnit) / (1m - reserveReward)) * miningReward) * coin.BlockrewardMultiplier;
                             break;
 							
-                        case "MRL":
+                        case "GNTL":
+                            decimal GntlMiningReward = GntlConstants.GntlMiningRewardInitial;
+                            
+                            block.Reward = (((blockHeader.Reward / coin.SmallestUnit)) * GntlMiningReward) * coin.BlockrewardMultiplier;
+                            break;
+
+						case "MRL":
                             decimal MoreloReserveReward = MoreloConstants.MoreloReserveRewardInitial;
                             
                             block.Reward = (((blockHeader.Reward / coin.SmallestUnit)) - MoreloReserveReward) * coin.BlockrewardMultiplier;
