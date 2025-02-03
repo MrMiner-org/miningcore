@@ -3809,6 +3809,38 @@
         "explorerTxLink": "https://chainz.cryptoid.info/via/tx.dws?{0}.htm",
         "explorerAccountLink": "https://chainz.cryptoid.info/via/address.dws?{0}.htm"
     },
+    "vkax": {
+        "name": "Vkax",
+        "symbol": "VKAX",
+        "family": "bitcoin",
+        "website": "https://vkaxcore.github.io/VKAX/",
+        "market": "https://www.coingecko.com/coins/vkax",
+        "github": "https://github.com/vkaxcore/VKAX",
+        "explorer": "https://explore.vkax.net/",
+        "twitter": "",
+        "telegram": "",
+        "discord": "https://discord.gg/AKbJJqMJ7n",
+        "coinbaseHasher": {
+            "hash": "sha256d"
+        },
+        "headerHasher": {
+            "hash": "mike"
+        },
+        "blockHasher": {
+            "hash": "reverse",
+            "args": [
+                {
+                    "hash": "sha256d"
+                }
+            ]
+        },
+        "hasMasterNodes": true,
+        "shareMultiplier": 65536,
+        "coinbaseMinConfimations": 200,
+        "explorerBlockLink": "https://explore.vkax.net/block/$hash$",
+        "explorerTxLink": "https://explore.vkax.net/tx/{0}",
+        "explorerAccountLink": "https://explore.vkax.net/address/{0}"
+    },
     "voltpotcoin": {
         "name": "Volt Pot Coin",
         "canonicalName": "Auroracoin",
@@ -5246,7 +5278,7 @@
         "explorerAccountLink": "https://blockscout.etherone.one/address/{0}",
         "ethasher": "ethash"
     },
-        "octaspace": {
+	"octaspace": {
         "name": "OctaSpace",
         "canonicalName": "Octa.Space",
         "symbol": "OCTA",
