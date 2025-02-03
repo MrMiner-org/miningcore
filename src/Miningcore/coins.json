@@ -3424,6 +3424,37 @@
         "explorerTxLink": "https://be.rosebird.org/tx/{0}",
         "explorerAccountLink": "https://be.rosebird.org/address/{0}"
     },
+    "stakecube": {
+        "name": "StakeCube",
+        "canonicalName": "Stakecube",
+        "symbol": "SCC",
+        "family": "progpow",
+        "progpower": "sccpow",
+        "website": "https://stakecube.net/",
+        "market": "https://coinmarketcap.com/currencies/stakecubecoin",
+        "twitter": "https://twitter.com/stakecube",
+        "telegram": "https://t.me/Stakecube",
+        "discord": "https://discord.com/invite/hhQApC9",
+        "coinbaseHasher": {
+            "hash": "sha256d"
+        },
+        "headerHasher": {
+            "hash": "sha256d"
+        },
+        "blockHasher": {
+            "hash": "reverse",
+            "args": [
+                {
+                    "hash": "sha256d"
+                }
+            ]
+        },
+        "hasMasterNodes": true,
+        "shareMultiplier": 1,
+        "explorerBlockLink": "https://scc.ccore.online/block/$height$",
+        "explorerTxLink": "https://scc.ccore.online/tx/{0}",
+        "explorerAccountLink": "https://scc.ccore.online/address/{0}"
+    },
     "shroud": {
         "name": "ShroudX",
         "symbol": "SHRX",

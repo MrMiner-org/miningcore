@@ -34,6 +34,16 @@ public class PhicoinConstants
     public static double Multiplier = (double) new BigRational(BigMaxValue, Diff1);
 }
 
+public class SccConstants
+{
+    public const int EpochLength = 3240;
+    public static BigInteger BigMaxValue = BigInteger.Pow(2, 256);
+    public static readonly BigInteger Diff1B = BigInteger.Parse("00000000ffff0000000000000000000000000000000000000000000000000000", NumberStyles.AllowHexSpecifier, null);
+    public static readonly BigInteger Diff1 = BigInteger.Parse("00000000ffff0000000000000000000000000000000000000000000000000000", NumberStyles.HexNumber);
+    public const int ExtranoncePlaceHolderLength = 2;
+    public static double Multiplier = (double) new BigRational(BigMaxValue, Diff1);
+}
+
 public class TelestaiConstants
 {
     public const int EpochLength = 27500;
