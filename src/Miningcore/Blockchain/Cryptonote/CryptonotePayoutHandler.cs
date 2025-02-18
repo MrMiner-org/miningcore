@@ -391,7 +391,7 @@ public class CryptonotePayoutHandler : PayoutHandlerBase,
         extraConfig = pc.PaymentProcessing.Extra.SafeExtensionDataAs<CryptonotePoolPaymentProcessingConfigExtra>();
 
 		var coin = poolConfig.Template.As<CryptonoteCoinTemplate>();
-		int PayoutMinBlockConfirmations = coin.CoinbaseMinConfimations ?? CryptonoteConstants.PayoutMinBlockConfirmations;
+		PayoutMinBlockConfirmations = coin?.CoinbaseMinConfimations ?? CryptonoteConstants.PayoutMinBlockConfirmations;
 		logger = LogUtil.GetPoolScopedLogger(typeof(CryptonotePayoutHandler), pc);
 
         // configure standard daemon
