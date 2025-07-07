@@ -16,6 +16,7 @@
 - Live Stats [API](https://github.com/oliverw/miningcore/wiki/API) on Port 4000
 - WebSocket streaming of notable events like Blocks found, Blocks unlocked, Payments and more
 - POW (proof-of-work) & POS (proof-of-stake) support
+- Hybrid PoW/PoS coins supported via the `isPseudoPoS` coin property
 - Detailed per-pool logging to console & filesystem
 - Runs on Linux and Windows
 
@@ -185,6 +186,10 @@ Once you have done this for all of your existing pools you should now restore yo
 ### Configuration
 
 Create a configuration file `config.json` as described [here](https://github.com/oliverw/miningcore/wiki/Configuration).
+
+To enable hybrid PoW/PoS coins, set `"IsPseudoPoS": true` within your pool's
+`coin` template section and ensure the coin definition in `coins.json` includes
+`"isPseudoPoS": true`.
 
 ### Start the Pool
 
