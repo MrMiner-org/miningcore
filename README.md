@@ -59,6 +59,10 @@ or
 ```console
 ./build-ubuntu-22.04.sh
 ```
+or
+```console
+./build-ubuntu-24.04.sh
+```
 
 ## Building on Windows
 
