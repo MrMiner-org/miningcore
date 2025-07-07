@@ -482,8 +482,10 @@ public abstract class BitcoinJobManagerBase<TJob> : JobManagerBase<TJob>
         if(validateAddressResponse is not {IsValid: true})
             throw new PoolStartupException($"Daemon reports pool-address '{poolConfig.Address}' as invalid", poolConfig.Id);
 
-        isPoS = poolConfig.Template is BitcoinTemplate {IsPseudoPoS: true} ||
-            (difficultyResponse.Values().Any(x => x.Path == "proof-of-stake" && !difficultyResponse.Values().Any(x => x.Path == "proof-of-work")));
+        bool isHybrid = poolConfig.Template is BitcoinTemplate {IsPseudoPoS: true};
+        isPoS = !isHybrid &&
+            difficultyResponse.Values().Any(x => x.Path == "proof-of-stake" &&
+                !difficultyResponse.Values().Any(y => y.Path == "proof-of-work"));
         
         forcePoolAddressDestinationWithPubKey = poolConfig.Template is BitcoinTemplate {ForcePoolAddressDestinationWithPubKey: true};
 
