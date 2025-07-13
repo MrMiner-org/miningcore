@@ -21,6 +21,17 @@
 - Detailed per-pool logging to console & filesystem
 - Runs on Linux and Windows
 
+## Quick Start
+
+```console
+git clone https://github.com/blackmennewstyle/miningcore
+cd miningcore
+./build-ubuntu-22.04.sh   # choose the script that matches your OS
+cp examples/ethereum_pool.json config.json
+cd build
+Miningcore -c config.json
+```
+
 ## Support
 
 Commercial support directly by the maintainer is available through [miningcore.pro](https://store.miningcore.pro).
